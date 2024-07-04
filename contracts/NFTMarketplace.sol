@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.26;
+pragma solidity ^0.8.4;
 
 //internal import for net openzwlin 
  import "@openzeppelin/contracts/utils/Counters.sol";
@@ -32,6 +32,11 @@ pragma solidity ^0.8.26;
         bool sold,
 
     );
-    constructor() ERC721("NFT Metaverse Token","MYNFT")
+    constructor() ERC721("NFT Metaverse Token","MYNFT"){
+        owner == payable(msg.sender);
 
+    }
+    function updateListingPrice(
+         
+    )
  }
